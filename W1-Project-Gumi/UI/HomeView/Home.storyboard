@@ -35,7 +35,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="O9p-j8-Dn0">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell" id="O9p-j8-Dn0" customClass="CustomCollectionViewCell" customModule="W1_Project_Gumi" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="h3n-Px-0Rb">
@@ -202,6 +202,7 @@
                         <viewLayoutGuide key="safeArea" id="dgJ-rs-eIl"/>
                     </view>
                     <connections>
+                        <outlet property="collectionView" destination="edW-fM-AgP" id="oM5-fV-Opw"/>
                         <outlet property="detailsView" destination="pic-5O-D6B" id="9L1-57-iKR"/>
                     </connections>
                 </viewController>

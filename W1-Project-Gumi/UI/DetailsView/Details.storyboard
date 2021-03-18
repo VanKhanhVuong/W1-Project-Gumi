@@ -10,7 +10,7 @@
         <!--Details View Controller-->
         <scene sceneID="aB9-kI-uD3">
             <objects>
-                <viewController id="dZq-aU-2Yw" customClass="DetailsViewController" customModule="W1_Project_Gumi" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DetailsViewController" id="dZq-aU-2Yw" customClass="DetailsViewController" customModule="W1_Project_Gumi" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="y4y-UH-a6L">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -74,14 +74,14 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iLD-Jk-Vdu">
-                                        <rect key="frame" x="30" y="278" width="248.5" height="96"/>
+                                        <rect key="frame" x="30" y="258" width="248.5" height="116"/>
                                         <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <state key="normal" title="Button">
                                             <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                         </state>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LpX-QS-INb">
-                                        <rect key="frame" x="283.5" y="279.5" width="100.5" height="93.5"/>
+                                        <rect key="frame" x="283.5" y="259.5" width="100.5" height="113.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                         <color key="tintColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
                                         <state key="normal" backgroundImage="heart" catalog="system"/>
@@ -97,7 +97,7 @@
                                     <constraint firstItem="8wv-ej-ETf" firstAttribute="leading" secondItem="X8f-9T-vnp" secondAttribute="leading" constant="30" id="8ZD-U0-gFF"/>
                                     <constraint firstItem="ptT-VE-mCW" firstAttribute="centerY" secondItem="8wv-ej-ETf" secondAttribute="centerY" id="9vQ-pK-pjk"/>
                                     <constraint firstAttribute="trailing" secondItem="LpX-QS-INb" secondAttribute="trailing" constant="30" id="DiI-Rq-iAT"/>
-                                    <constraint firstItem="iLD-Jk-Vdu" firstAttribute="top" secondItem="N9w-5e-ZcC" secondAttribute="bottom" constant="30" id="EED-jp-SmY"/>
+                                    <constraint firstItem="iLD-Jk-Vdu" firstAttribute="top" secondItem="N9w-5e-ZcC" secondAttribute="bottom" constant="10" id="EED-jp-SmY"/>
                                     <constraint firstItem="Z1J-00-VIC" firstAttribute="height" secondItem="xZK-ac-IsU" secondAttribute="height" multiplier="0.65625" id="EzF-Fy-bD5"/>
                                     <constraint firstItem="Z1J-00-VIC" firstAttribute="leading" secondItem="xZK-ac-IsU" secondAttribute="trailing" constant="30" id="Kbu-zv-JnQ"/>
                                     <constraint firstItem="N9w-5e-ZcC" firstAttribute="leading" secondItem="X8f-9T-vnp" secondAttribute="leading" constant="30" id="NwU-Am-ntn"/>
@@ -134,12 +134,26 @@
                                             <constraint firstAttribute="width" secondItem="drO-qg-coN" secondAttribute="height" multiplier="1:1" id="AXu-Ii-GZb"/>
                                         </constraints>
                                     </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iZB-hh-VUJ">
+                                        <rect key="frame" x="0.0" y="0.0" width="83" height="37.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                        <state key="normal" title="&lt;">
+                                            <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="backButton:" destination="dZq-aU-2Yw" eventType="touchUpInside" id="1sO-8N-gj0"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstItem="drO-qg-coN" firstAttribute="centerY" secondItem="eGS-AF-FiX" secondAttribute="centerY" id="9Ns-tp-q7l"/>
+                                    <constraint firstItem="iZB-hh-VUJ" firstAttribute="leading" secondItem="eGS-AF-FiX" secondAttribute="leading" id="NLo-hL-1FY"/>
                                     <constraint firstItem="drO-qg-coN" firstAttribute="centerX" secondItem="eGS-AF-FiX" secondAttribute="centerX" id="SZe-TC-y4z"/>
                                     <constraint firstItem="drO-qg-coN" firstAttribute="width" secondItem="eGS-AF-FiX" secondAttribute="width" multiplier="1/2" id="XVq-4j-Xye"/>
+                                    <constraint firstItem="iZB-hh-VUJ" firstAttribute="height" secondItem="eGS-AF-FiX" secondAttribute="height" multiplier="1/12" id="lOU-ik-KtT"/>
+                                    <constraint firstItem="iZB-hh-VUJ" firstAttribute="top" secondItem="eGS-AF-FiX" secondAttribute="top" id="s4I-hw-Zcb"/>
+                                    <constraint firstItem="iZB-hh-VUJ" firstAttribute="width" secondItem="eGS-AF-FiX" secondAttribute="width" multiplier="1/5" id="saV-lB-AUk"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -156,6 +170,12 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="YDO-PW-aBw"/>
                     </view>
+                    <connections>
+                        <outlet property="buyButton" destination="iLD-Jk-Vdu" id="gD9-Iq-DYm"/>
+                        <outlet property="fruitImageView" destination="drO-qg-coN" id="aQS-uF-iHE"/>
+                        <outlet property="nameLabel" destination="Hiw-cZ-Hr5" id="6tW-69-pFA"/>
+                        <outlet property="qualityLabel" destination="Z1J-00-VIC" id="gS6-Pu-ToA"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RVC-n2-W5g" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

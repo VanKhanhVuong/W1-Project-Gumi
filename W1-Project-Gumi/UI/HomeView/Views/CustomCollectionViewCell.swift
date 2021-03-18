@@ -12,17 +12,22 @@ class CustomCollectionViewCell: UICollectionViewCell {
 
     @IBOutlet weak var labelFruitName: UILabel!
     @IBOutlet weak var imageViewFruit: UIImageView!
-    static let identifier = "CustomCollectionViewCell"
     
     override func awakeFromNib() {
+        self.imageViewFruit.layer.cornerRadius = self.frame.size.height / 7
+        self.imageViewFruit.clipsToBounds = true
         super.awakeFromNib()
-        // Initialization code
     }
-    public func bindData(with fruitName:String, image: UIImage){
-        labelFruitName.text = fruitName
-        imageViewFruit.image = image
+    public func bindData(with data: Fruit){
+        self.labelFruitName.text = data.name
+        self.imageViewFruit.image = data.image
     }
-    static func nib() ->UINib{
-        return UINib(nibName: "CustomCollectionViewCell", bundle: nil)
+
+    static var identifier: String {
+        return String(describing: self)
+    }
+    
+    static var nib: UINib{
+        return UINib(nibName: identifier, bundle: nil)
     }
 }

@@ -13,12 +13,16 @@ struct Fruit {
     let name: String
     let quality : String
     let price : Float
+    let origin: String
+    let backgrourd: UIColor
         
-    init(image :UIImage, name: String, quality:String, price:Float) {
+    init(image :UIImage, name: String, quality:String, price:Float, origin:String, backgrourd:UIColor) {
         self.image = image;
         self.name = name;
         self.quality = quality;
         self.price = price;
+        self.origin = origin
+        self.backgrourd = backgrourd
     }
 }
 

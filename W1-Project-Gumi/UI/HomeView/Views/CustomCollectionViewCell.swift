@@ -14,9 +14,8 @@ class CustomCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var imageViewFruit: UIImageView!
     
     override func awakeFromNib() {
-        self.imageViewFruit.layer.cornerRadius = self.frame.size.height / 7
-        self.imageViewFruit.clipsToBounds = true
         super.awakeFromNib()
+        self.imageViewFruit.customImageCornerRadius()
     }
     public func bindData(with data: Fruit){
         self.labelFruitName.text = data.name

@@ -55,21 +55,21 @@
                                                 <rect key="frame" x="0.0" y="30" width="139" height="139.5"/>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Strawberry" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mQX-3J-DqV">
-                                                <rect key="frame" x="144" y="30" width="84.5" height="47.5"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <rect key="frame" x="144" y="30" width="92.5" height="47.5"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="45/kg" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ro4-ic-uii">
                                                 <rect key="frame" x="144" y="124" width="44.5" height="46.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <nil key="textColor"/>
+                                                <color key="textColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Best Quality" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nQQ-t1-yUd">
                                                 <rect key="frame" x="144" y="77.5" width="92.5" height="46.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <nil key="textColor"/>
+                                                <color key="textColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pic-5O-D6B">
@@ -117,21 +117,21 @@
                                                 <rect key="frame" x="0.0" y="30" width="138" height="139"/>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Grapes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lc2-6b-AiO">
-                                                <rect key="frame" x="143" y="30" width="55.5" height="46"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <rect key="frame" x="143" y="30" width="59" height="46"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="High Quality" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tyN-aW-6MY">
                                                 <rect key="frame" x="143" y="76" width="94" height="46.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <nil key="textColor"/>
+                                                <color key="textColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="55/kg" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B5b-GR-4b4">
                                                 <rect key="frame" x="143" y="122.5" width="44" height="46.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <nil key="textColor"/>
+                                                <color key="textColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="npn-5R-fir">
@@ -203,7 +203,8 @@
                     </view>
                     <connections>
                         <outlet property="collectionView" destination="edW-fM-AgP" id="oM5-fV-Opw"/>
-                        <outlet property="detailsView" destination="pic-5O-D6B" id="9L1-57-iKR"/>
+                        <outletCollection property="detailsView" destination="pic-5O-D6B" collectionClass="NSMutableArray" id="MK2-Qw-BKR"/>
+                        <outletCollection property="detailsView" destination="npn-5R-fir" collectionClass="NSMutableArray" id="MgU-0d-rio"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Mf1-wj-YIO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -212,8 +213,8 @@
         </scene>
     </scenes>
     <resources>
-        <image name="berry" width="360" height="360"/>
-        <image name="grapes" width="1200" height="1216"/>
-        <image name="shopping-basket-button (2)" width="32" height="32"/>
+        <image name="berry" width="120" height="120"/>
+        <image name="grapes" width="120" height="120"/>
+        <image name="shopping-basket-button (2)" width="10.666666984558105" height="10.666666984558105"/>
     </resources>
 </document>

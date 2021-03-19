@@ -13,7 +13,8 @@ class DetailsViewController: UIViewController {
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var qualityLabel: UILabel!
     @IBOutlet weak var buyButton: UIButton!
-
+    @IBOutlet weak var originLabel: UILabel!
+    @IBOutlet weak var topView: UIView!
     @IBAction func backButton(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
     }
@@ -21,11 +22,13 @@ class DetailsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         guard let data = fruit else { return }
         fruitImageView.image = data.image
         nameLabel.text = data.name
         qualityLabel.text = data.quality
-        buyButton.setTitle("\(data.price)", for: .normal)
+        buyButton.setTitle("\(data.price)$", for: .normal)
+        topView.backgroundColor = data.backgrourd
+        originLabel.text = "from " + data.origin
+        buyButton.customButtonCornerRadius()
     }
 }

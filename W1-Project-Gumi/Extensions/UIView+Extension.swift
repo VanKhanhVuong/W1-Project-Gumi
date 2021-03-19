@@ -11,7 +11,7 @@ import UIKit
 extension UIView {
     func customCornerRadius()  {
         self.clipsToBounds = true
-        self.layer.cornerRadius = 10
+        self.layer.cornerRadius = 12
         self.layer.maskedCorners = [.layerMinXMaxYCorner, .layerMinXMinYCorner]
     }
 }

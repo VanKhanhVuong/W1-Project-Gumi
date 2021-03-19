@@ -70,7 +70,7 @@
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uyN-BF-4jl">
                                         <rect key="frame" x="114" y="205.5" width="42" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
+                                        <color key="textColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iLD-Jk-Vdu">
@@ -81,10 +81,10 @@
                                         </state>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LpX-QS-INb">
-                                        <rect key="frame" x="283.5" y="259.5" width="100.5" height="113.5"/>
+                                        <rect key="frame" x="298.5" y="258" width="85.5" height="116"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                         <color key="tintColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
-                                        <state key="normal" backgroundImage="heart" catalog="system"/>
+                                        <state key="normal" backgroundImage="heart-in-a-circle (2)"/>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -120,7 +120,7 @@
                                     <constraint firstItem="iLD-Jk-Vdu" firstAttribute="leading" secondItem="X8f-9T-vnp" secondAttribute="leading" constant="30" id="qnA-61-gUs"/>
                                     <constraint firstItem="RLD-Kp-Jec" firstAttribute="leading" secondItem="X8f-9T-vnp" secondAttribute="leading" constant="30" id="shz-wf-NPt"/>
                                     <constraint firstItem="ptT-VE-mCW" firstAttribute="leading" secondItem="8wv-ej-ETf" secondAttribute="trailing" constant="10" id="tCq-b3-cBE"/>
-                                    <constraint firstItem="LpX-QS-INb" firstAttribute="leading" secondItem="iLD-Jk-Vdu" secondAttribute="trailing" constant="5" id="tv6-Ow-l90"/>
+                                    <constraint firstItem="LpX-QS-INb" firstAttribute="leading" secondItem="iLD-Jk-Vdu" secondAttribute="trailing" constant="20" id="tv6-Ow-l90"/>
                                     <constraint firstItem="LpX-QS-INb" firstAttribute="top" secondItem="iLD-Jk-Vdu" secondAttribute="top" id="xOj-Xg-vSe"/>
                                     <constraint firstItem="SiK-VO-oro" firstAttribute="width" secondItem="RLD-Kp-Jec" secondAttribute="width" id="yvg-dH-ZXl"/>
                                 </constraints>
@@ -135,7 +135,7 @@
                                         </constraints>
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iZB-hh-VUJ">
-                                        <rect key="frame" x="0.0" y="0.0" width="83" height="37.5"/>
+                                        <rect key="frame" x="0.0" y="10" width="83" height="37.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                         <state key="normal" title="&lt;">
                                             <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
@@ -152,12 +152,11 @@
                                     <constraint firstItem="drO-qg-coN" firstAttribute="centerX" secondItem="eGS-AF-FiX" secondAttribute="centerX" id="SZe-TC-y4z"/>
                                     <constraint firstItem="drO-qg-coN" firstAttribute="width" secondItem="eGS-AF-FiX" secondAttribute="width" multiplier="1/2" id="XVq-4j-Xye"/>
                                     <constraint firstItem="iZB-hh-VUJ" firstAttribute="height" secondItem="eGS-AF-FiX" secondAttribute="height" multiplier="1/12" id="lOU-ik-KtT"/>
-                                    <constraint firstItem="iZB-hh-VUJ" firstAttribute="top" secondItem="eGS-AF-FiX" secondAttribute="top" id="s4I-hw-Zcb"/>
+                                    <constraint firstItem="iZB-hh-VUJ" firstAttribute="top" secondItem="eGS-AF-FiX" secondAttribute="top" constant="10" id="s4I-hw-Zcb"/>
                                     <constraint firstItem="iZB-hh-VUJ" firstAttribute="width" secondItem="eGS-AF-FiX" secondAttribute="width" multiplier="1/5" id="saV-lB-AUk"/>
                                 </constraints>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="YDO-PW-aBw" firstAttribute="trailing" secondItem="X8f-9T-vnp" secondAttribute="trailing" id="3qD-hp-jKf"/>
                             <constraint firstItem="X8f-9T-vnp" firstAttribute="leading" secondItem="YDO-PW-aBw" secondAttribute="leading" id="Sxn-DA-hLN"/>
@@ -174,7 +173,9 @@
                         <outlet property="buyButton" destination="iLD-Jk-Vdu" id="gD9-Iq-DYm"/>
                         <outlet property="fruitImageView" destination="drO-qg-coN" id="aQS-uF-iHE"/>
                         <outlet property="nameLabel" destination="Hiw-cZ-Hr5" id="6tW-69-pFA"/>
+                        <outlet property="originLabel" destination="uyN-BF-4jl" id="LMh-RT-GRV"/>
                         <outlet property="qualityLabel" destination="Z1J-00-VIC" id="gS6-Pu-ToA"/>
+                        <outlet property="topView" destination="eGS-AF-FiX" id="bAF-zP-nD0"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RVC-n2-W5g" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -183,6 +184,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="heart" catalog="system" width="128" height="109"/>
+        <image name="heart-in-a-circle (2)" width="170.66667175292969" height="170.66667175292969"/>
     </resources>
 </document>

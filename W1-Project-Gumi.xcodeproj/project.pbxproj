@@ -19,6 +19,8 @@
 		FADC945B26008C1900C9D671 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FADC945A26008C1900C9D671 /* DetailsViewController.swift */; };
 		FADC945D26008C3300C9D671 /* Details.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FADC945C26008C3300C9D671 /* Details.storyboard */; };
 		FADC945F26018AE800C9D671 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FADC945E26018AE800C9D671 /* UIView+Extension.swift */; };
+		FAE75B252604998D00952FD9 /* UIImageView+Extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE75B242604998D00952FD9 /* UIImageView+Extention.swift */; };
+		FAE75B2726049BD500952FD9 /* UIButton+Extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE75B2626049BD500952FD9 /* UIButton+Extention.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +38,8 @@
 		FADC945A26008C1900C9D671 /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 		FADC945C26008C3300C9D671 /* Details.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Details.storyboard; sourceTree = "<group>"; };
 		FADC945E26018AE800C9D671 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
+		FAE75B242604998D00952FD9 /* UIImageView+Extention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extention.swift"; sourceTree = "<group>"; };
+		FAE75B2626049BD500952FD9 /* UIButton+Extention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Extention.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +107,8 @@
 			isa = PBXGroup;
 			children = (
 				FADC945E26018AE800C9D671 /* UIView+Extension.swift */,
+				FAE75B242604998D00952FD9 /* UIImageView+Extention.swift */,
+				FAE75B2626049BD500952FD9 /* UIButton+Extention.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -215,8 +221,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				FADC943D2600561D00C9D671 /* AppDelegate.swift in Sources */,
+				FAE75B2726049BD500952FD9 /* UIButton+Extention.swift in Sources */,
 				FA03DE222602006700285D05 /* CustomCollectionViewCell.swift in Sources */,
 				FADC943F2600561D00C9D671 /* SceneDelegate.swift in Sources */,
+				FAE75B252604998D00952FD9 /* UIImageView+Extention.swift in Sources */,
 				FADC9456260056CF00C9D671 /* HomeViewController.swift in Sources */,
 				FADC945F26018AE800C9D671 /* UIView+Extension.swift in Sources */,
 				FA03DE132601A7B300285D05 /* CommonModels.swift in Sources */,

@@ -13,10 +13,10 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet var detailsView: [UIView]!
     
-    let data = [Fruit(image: #imageLiteral(resourceName: "berry"), name: "Strawberry", quality: "Best Quality", price: 4),
-                Fruit(image: #imageLiteral(resourceName: "organge"), name: "Organge", quality: "High Quality", price: 5),
-                 Fruit(image: #imageLiteral(resourceName: "grapes"), name: "Grapes", quality: "High Quality", price: 5),
-                  Fruit(image: #imageLiteral(resourceName: "lemon"), name: "Lemon", quality: "Best Quality", price: 6)]
+    let data = [Fruit(image: #imageLiteral(resourceName: "berry"), name: "Strawberry", quality: "Best Quality", price: 4, origin: "Spain", backgrourd: .red),
+                Fruit(image: #imageLiteral(resourceName: "organge"), name: "Organge", quality: "High Quality", price: 5, origin: "Viet Nam", backgrourd: .orange),
+                Fruit(image: #imageLiteral(resourceName: "grapes"), name: "Grapes", quality: "High Quality", price: 5, origin: "Korea", backgrourd: .purple),
+                Fruit(image: #imageLiteral(resourceName: "lemon"), name: "Lemon", quality: "Best Quality", price: 6, origin: "China", backgrourd: .yellow)]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,15 +25,12 @@ class HomeViewController: UIViewController {
         }
         registerCollectionView()
     }
-    
     func registerCollectionView(){
         collectionView.register(CustomCollectionViewCell.nib, forCellWithReuseIdentifier: CustomCollectionViewCell.identifier)
         collectionView.delegate = self
         collectionView.dataSource = self
-        
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .horizontal
-        //layout.itemSize = CGSize(width: 230, height: 230)
         collectionView.collectionViewLayout = layout
     }
 }
@@ -43,7 +40,6 @@ extension HomeViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return data.count
     }
-    
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CustomCollectionViewCell.identifier, for: indexPath) as! CustomCollectionViewCell
@@ -52,12 +48,10 @@ extension HomeViewController: UICollectionViewDataSource {
     }
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let mainStoryboard = UIStoryboard(name: "Details", bundle: .main)
-        guard let detailsViewController = mainStoryboard.instantiateViewController(withIdentifier: "DetailsViewController") as? DetailsViewController else {
-            return
-        }
+        guard let detailsViewController = mainStoryboard.instantiateViewController(withIdentifier: "DetailsViewController") as? DetailsViewController else { return }
         detailsViewController.fruit = data[indexPath.item]
+        detailsViewController.modalPresentationStyle = .fullScreen
         present(detailsViewController, animated: true, completion: nil)
-        
     }
     
 }
